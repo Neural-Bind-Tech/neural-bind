@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = () => {
     return (
-        <section id="about" className="py-20">
+        <section id="about" className="py-20 max-w-[1240px] mx-auto p-2">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#4CA1FF]">Meet NeuralBind</h2>
@@ -48,12 +48,12 @@ const AboutUs = () => {
                     ))}
                 </div>
 
-                <div className="text-center">
+                {/* <div className="text-center">
                     <h3 className="text-2xl font-bold mb-4 text-[#4CA1FF]">Our Vision</h3>
                     <p className="text-lg text-[#B0C4DE] max-w-2xl mx-auto">
                         &quot;To build at least one globally impactful product with 100 million monthly active users.&quot;
                     </p>
-                </div>
+                </div> */}
             </div>
         </section>
     );

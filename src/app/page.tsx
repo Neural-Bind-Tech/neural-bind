@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Navbar from "@/components/shared/Navbar"
 import Home from "@/components/shared/Home"
 import TaglineSection from "@/components/shared/TaglineSection"
@@ -11,18 +12,24 @@ import Footer from "@/components/shared/Footer"
 
 export default function NeuralBindLanding() {
   return (
-    <div className="min-h-screen bg-[#0B1E3D] text-white">
+    <div className="min-h-screen bg-[#0B1E3D] text-white ">
+
       {/* Navbar */}
       <Navbar />
+
+
+
+
 
       {/* Home */}
       <Home />
 
       {/* Tagline Section */}
-      <TaglineSection />
 
       {/* Mission Statement */}
       <MissionStatement />
+
+      <TaglineSection />
 
       {/* Services Section */}
       <ServiceSection />
@@ -39,8 +46,10 @@ export default function NeuralBindLanding() {
       {/* Contact Form */}
       <ContactForm />
 
+
       {/* Footer */}
       <Footer />
+
     </div>
   )
 }
