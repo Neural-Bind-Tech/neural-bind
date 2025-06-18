@@ -1,4 +1,4 @@
-import { Card, CardContent } from '../ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import cyber from '@/assets/cyber.png';
 import data from '@/assets/data.png';
 import digital from '@/assets/digital.png';

@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import { Card, CardContent } from '../ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const TestimonialsSection = () => {

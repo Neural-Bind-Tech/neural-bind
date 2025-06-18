@@ -1,14 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import Navbar from "@/components/shared/Navbar"
-import Home from "@/components/shared/Home"
-import TaglineSection from "@/components/shared/TaglineSection"
-import MissionStatement from "@/components/shared/MissionStatement"
-import ServiceSection from "@/components/shared/ServiceSection"
-import BenefitsSection from "@/components/shared/BenefitsSection"
-import TestimonialsSection from "@/components/shared/TestimonialsSection"
-import AboutUs from "@/components/shared/AboutUs"
-import ContactForm from "@/components/shared/ContactForm"
-import Footer from "@/components/shared/Footer"
+import Navbar from "@/components/shared/Home/Navbar"
+import Home from "@/components/shared/Home/Home"
+import TaglineSection from "@/components/shared/Home/TaglineSection"
+import MissionStatement from "@/components/shared/Home/MissionStatement"
+import ServiceSection from "@/components/shared/Home/ServiceSection"
+import BenefitsSection from "@/components/shared/Home/BenefitsSection"
+import TestimonialsSection from "@/components/shared/Home/TestimonialsSection"
+import AboutUs from "@/components/shared/Home/AboutUs"
+import ContactForm from "@/components/shared/Home/ContactForm"
+import Footer from "@/components/shared/Home/Footer"
 
 export default function NeuralBindLanding() {
   return (
@@ -17,18 +16,13 @@ export default function NeuralBindLanding() {
       {/* Navbar */}
       <Navbar />
 
-
-
-
-
       {/* Home */}
       <Home />
-
-      {/* Tagline Section */}
 
       {/* Mission Statement */}
       <MissionStatement />
 
+      {/* At glance */}
       <TaglineSection />
 
       {/* Services Section */}

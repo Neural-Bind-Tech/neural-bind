@@ -1,7 +1,6 @@
 import React from 'react';
-import { Button } from '../ui/button';
 import { ArrowRight, Sparkles } from 'lucide-react';
-
+import { Button } from '@/components/ui/button';
 const Home = () => {
     return (
         <section id="home" className="relative py-20 lg:py-32 overflow-hidden min-h-screen flex items-center">
@@ -67,8 +66,9 @@ const Home = () => {
                             size="lg"
                             variant="outline"
                             className="group relative border-2 border-[#1F75FE]/50 text-[#4CA1FF] hover:bg-gradient-to-r hover:from-[#1F75FE]/10 hover:to-[#4CA1FF]/10 hover:border-[#4CA1FF] hover:text-[#87CEEB] px-10 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-[#1F75FE]/20 hover:-translate-y-1 backdrop-blur-sm"
+
                         >
-                            <span className="relative z-10">See Our Services</span>
+                            <a className="relative z-10" href='#services'>See Our Services</a>
                             <div className="absolute inset-0 bg-gradient-to-r from-[#4CA1FF]/5 to-[#1F75FE]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
                         </Button>
                     </div>

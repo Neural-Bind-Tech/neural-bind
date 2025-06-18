@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 'use client'
 import React, { useState, useEffect } from 'react';
-import { Button } from '../ui/button';
+import { Button } from '@/components/ui/button';
 import { Mail, MapPin, Phone, Calendar, Send, CheckCircle, AlertCircle, Clock, User, MessageSquare } from 'lucide-react';
-import { Input } from '../ui/input';
+import { Input } from '@/components/ui/input';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -56,7 +56,7 @@ const ContactForm = () => {
         }
     };
 
-    const handleSubmit = async (e: { preventDefault: () => void; }) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         setIsSubmitting(true);
@@ -64,18 +64,28 @@ const ContactForm = () => {
 
         try {
 
-            await new Promise(resolve => setTimeout(resolve, 3000));
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            console.log(response);
+
+            if (!response.ok) throw new Error('Network error');
 
             setSubmitStatus('success');
             setFormData({ name: '', email: '', phone: '' });
             setFormErrors({});
-            // eslint-disable-next-line @typescript-eslint/no-unused-vars
         } catch (error) {
+            console.error('Submission failed:', error);
             setSubmitStatus('error');
         } finally {
             setIsSubmitting(false);
         }
     };
+
 
     // Auto-hide success message
     useEffect(() => {
@@ -195,12 +205,12 @@ const ContactForm = () => {
                                 {isSubmitting ? (
                                     <>
                                         <Clock className="w-5 h-5 mr-2 animate-spin" />
-                                        Sending...
+                                        Subscribing...
                                     </>
                                 ) : (
                                     <>
                                         <Send className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                                        Send Message
+                                        Subscribe
                                     </>
                                 )}
                             </Button>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent } from '../ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import docs from '@/assets/glance/docs.png'
 import calendar from '@/assets/glance/calendar.png'
 import client from '@/assets/glance/client.png'
