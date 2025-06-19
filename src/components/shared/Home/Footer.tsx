@@ -68,7 +68,7 @@ const Footer = () => {
                         <div className="space-y-3">
                             <div className="flex items-center space-x-3 text-[#B0C4DE] hover:text-[#4CA1FF] transition-colors">
                                 <Mail className="w-4 h-4 text-[#4CA1FF]" />
-                                <span className="text-sm">neuralbind.soft@gmail.com</span>
+                                <span className="text-sm">support@neuralbind.com</span>
                             </div>
                             <div className="flex items-center space-x-3 text-[#B0C4DE] hover:text-[#4CA1FF] transition-colors">
                                 <Phone className="w-4 h-4 text-[#4CA1FF]" />

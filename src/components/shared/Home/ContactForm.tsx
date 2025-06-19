@@ -25,7 +25,7 @@ const ContactForm = () => {
         },
         {
             icon: Mail,
-            text: 'neuralbind.soft@gmail.com',
+            text: 'support@neuralbind.com',
             href: 'https://mail.google.com/mail/?view=cm&fs=1&to=neuralbind.soft@gmail.com',
             label: 'Send us an email'
         },
