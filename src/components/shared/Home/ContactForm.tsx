@@ -108,7 +108,7 @@ const ContactForm = () => {
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-[#1F75FE] to-[#4CA1FF] rounded-full mb-6 shadow-lg shadow-[#1F75FE]/30">
                         <Mail className="w-8 h-8 text-white" />
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-[#4CA1FF] to-[#1F75FE] bg-clip-text text-transparent">
+                    <h2 className="text-4xl md:text-5xl pb-3 font-bold mb-6 bg-gradient-to-r from-[#4CA1FF] to-[#1F75FE] bg-clip-text text-transparent">
                         Let&apos;s Work Together
                     </h2>
                     <p className="text-xl text-[#B0C4DE] max-w-2xl mx-auto leading-relaxed">

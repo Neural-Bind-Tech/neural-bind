@@ -85,7 +85,7 @@ const TestimonialsSection = () => {
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#4CA1FF] to-[#1F75FE] rounded-2xl mb-6 shadow-lg shadow-[#4CA1FF]/20">
                         <Quote className="w-8 h-8 text-white" />
                     </div>
-                    <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#4CA1FF] to-[#1F75FE] bg-clip-text text-transparent">
+                    <h2 className="text-4xl md:text-5xl font-bold pb-2 mb-4 bg-gradient-to-r from-[#4CA1FF] to-[#1F75FE] bg-clip-text text-transparent">
                         What Our Clients Say
                     </h2>
                     <p className="text-xl text-[#B0C4DE] max-w-2xl mx-auto leading-relaxed">
