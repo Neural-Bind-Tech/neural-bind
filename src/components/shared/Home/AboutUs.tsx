@@ -1,7 +1,7 @@
 import React from 'react';
-import sunan from '@/assets/images/sunan.jpg'
+import sunan from '@/assets/images/sunan.png'
 import nayeem from '@/assets/images/luffy.jpg'
-import noman from '@/assets/images/noman.jpg'
+import noman from '@/assets/images/noman.png'
 import Image from 'next/image';
 
 const employees = [

@@ -4,6 +4,8 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import logo from '@/assets/logo/h.png'
+import Image from 'next/image';
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,12 +33,10 @@ const Navbar = () => {
             <div className="container px-4 py-4 max-w-[1240px] mx-auto">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <div className="flex items-center space-x-2">
-                        <div className="w-8 h-8 bg-gradient-to-r from-[#1F75FE] to-[#4CA1FF] rounded-lg flex items-center justify-center">
-                            <span className="text-white font-bold text-sm">NB</span>
-                        </div>
-                        <span className="text-xl font-bold text-white">NeuralBind</span>
-                    </div>
+
+                    <Link href='/'>
+                        <Image src={logo.src} alt='logo' width={155} height={36} />
+                    </Link>
 
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">

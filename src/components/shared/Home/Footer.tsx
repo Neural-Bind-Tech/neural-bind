@@ -1,9 +1,10 @@
 'use client'
 import { Facebook, Github, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
-
+import logo from '@/assets/logo/h.png'
 const Footer = () => {
 
     const [phone, setPhone] = useState('');
@@ -54,11 +55,10 @@ const Footer = () => {
                 <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mb-8">
                     {/* Company Info */}
                     <div className="lg:col-span-1">
-                        <div className="flex items-center space-x-2 mb-6">
-                            <div className="w-10 h-10 bg-gradient-to-r from-[#1F75FE] to-[#4CA1FF] rounded-xl flex items-center justify-center shadow-lg">
-                                <span className="text-white font-bold text-lg">NB</span>
-                            </div>
-                            <span className="text-2xl font-bold text-white">NeuralBind</span>
+                        <div className="mb-6">
+                            <Link href='/'>
+                                <Image src={logo.src} alt='logo' width={155} height={36} />
+                            </Link>
                         </div>
                         <p className="text-[#B0C4DE] mb-6 leading-relaxed">
                             Your trusted partner for comprehensive digital solutions, from concept to deployment and beyond. We transform ideas into powerful digital experiences.
