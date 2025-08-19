@@ -1,12 +1,12 @@
-import UnderConstruction from '@/components/shared/Reuse/UnderWork';
 import React from 'react';
+import BlogPage from '@/components/ui/blog/BlogPage';
 
-const BlogPage = () => {
+const BlogPageDefault = () => {
     return (
         <>
-            <UnderConstruction />
+            <BlogPage />
         </>
     );
 };
 
-export default BlogPage;
+export default BlogPageDefault;
