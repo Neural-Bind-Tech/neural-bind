@@ -241,17 +241,18 @@ const SingleBlog = () => {
                                 </div>
                             </div>
 
-                            {/* Featured Image */}
                             {blog.picture && (
-                                <div className="relative rounded-xl overflow-hidden h-72">
-                                    <Image
-                                        src={blog.picture}
-                                        alt={blog.title}
-                                        fill
-                                        className="object-cover"
-                                        priority
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3D]/30 via-transparent to-transparent"></div>
+                                <div className="relative rounded-xl overflow-hidden">
+                                    <div className="relative pb-[56.25%]"> {/* 16:9 Aspect Ratio Container */}
+                                        <Image
+                                            src={blog.picture}
+                                            alt={blog.title}
+                                            fill
+                                            className="object-contain w-full"
+                                            priority
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3D]/30 via-transparent to-transparent"></div>
+                                    </div>
                                 </div>
                             )}
 
