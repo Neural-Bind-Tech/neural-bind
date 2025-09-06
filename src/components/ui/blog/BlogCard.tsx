@@ -12,11 +12,11 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
             {/* Featured Image */}
             <div className="relative mb-4 rounded-lg overflow-hidden">
                 <Image
-                    src={blog.picture || '/api/placeholder/400/200'}
-                    alt={blog.title}
+                    src={blog?.picture || '/api/placeholder/400/200'}
+                    alt={blog?.title}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    width={50}
-                    height={50}
+                    width={400}
+                    height={200}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3D]/60 via-transparent to-transparent"></div>
             </div>
@@ -24,7 +24,7 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
             {/* Content */}
             <div className="space-y-3">
                 <h3 className="text-xl font-bold text-white group-hover:text-[#4CA1FF] transition-colors duration-300 line-clamp-2">
-                    {blog.title}
+                    {blog?.title}
                 </h3>
 
                 <p className="text-[#B0C4DE] text-sm line-clamp-3 leading-relaxed">
@@ -36,7 +36,7 @@ const BlogCard = ({ blog }: { blog: IBlog }) => {
                     <div className="flex items-center space-x-4 text-xs text-[#B0C4DE]">
                         <div className="flex items-center space-x-1">
                             <User className="w-3 h-3" />
-                            <span>{blog.author.Admin.name || 'Admin'}</span>
+                            <span>{blog?.author?.Admin?.name || 'Admin'}</span>
                         </div>
                         <div className="flex items-center space-x-1">
                             <Calendar className="w-3 h-3" />

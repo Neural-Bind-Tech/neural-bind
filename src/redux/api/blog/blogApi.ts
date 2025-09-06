@@ -7,7 +7,7 @@ const blogApi = baseApi.injectEndpoints({
     endpoints: (build) => ({
         getAllBlog: build.query({
             query: (args: Record<string, any>) => ({
-                url: '/blog',
+                url: '/blog?status=PUBLISHED',
                 method: 'GET',
                 params: args
             }),
