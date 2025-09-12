@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Mail, MapPin, Phone, Calendar, Send, CheckCircle, AlertCircle, Clock, User, MessageSquare } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import { useCreateClientMutation } from '@/redux/api/client/clientApi';
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -15,6 +16,7 @@ const ContactForm = () => {
     const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
     const [focusedField, setFocusedField] = useState<string | null>(null);
     const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
+    const [createClient] = useCreateClientMutation()
 
     const contactInfo = [
         {
@@ -64,16 +66,8 @@ const ContactForm = () => {
 
         try {
 
-            const response = await fetch('/api/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-            console.log(response);
-
-            if (!response.ok) throw new Error('Network error');
+            const response = await createClient(formData).unwrap()
+            if (!response.success) throw new Error('Network error');
 
             setSubmitStatus('success');
             setFormData({ name: '', email: '', phone: '' });

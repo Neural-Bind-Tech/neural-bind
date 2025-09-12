@@ -5,10 +5,12 @@ import Link from 'next/link';
 import React, { useState } from 'react';
 import { toast } from 'sonner';
 import logo from '@/assets/logo/h.png'
+import { useCreateClientMutation } from '@/redux/api/client/clientApi';
 const Footer = () => {
 
     const [phone, setPhone] = useState('');
     const [loading, setLoading] = useState(false);
+    const [createClient] = useCreateClientMutation()
 
 
     const handleSubscribe = async () => {
@@ -20,21 +22,13 @@ const Footer = () => {
         try {
             setLoading(true);
 
-            const res = await fetch('/api/number', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ number: phone }),
-            });
+            const res = await createClient({ phone }).unwrap();
 
-            const data = await res.json();
-
-            if (res.ok) {
+            if (res.success) {
                 toast.success('Subscribed successfully!');
                 setPhone('');
             } else {
-                toast.error(data.message || 'Failed to subscribe.');
+                toast.error('Failed to subscribe.');
             }
         } catch (error) {
             console.error(error);
