@@ -5,7 +5,7 @@ import { axiosBaseQuery } from '@/helpers/axios/axiosBaseQuery'
 
 export const baseApi = createApi({
   reducerPath: 'baseApi',
-  baseQuery: axiosBaseQuery({ baseUrl: 'http://localhost:5000/api/v1' }),
+  baseQuery: axiosBaseQuery({ baseUrl: 'https://landingpagebackend-production-bcad.up.railway.app/api/v1' }),
   endpoints: () => ({
 
   }),
